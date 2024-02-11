@@ -1,0 +1,15 @@
+[project]
+name = "TestRepo"
+version = "0.1.0"
+description = "Default template for PDM package"
+authors = [
+    {name = "Andrey-Ukhnalyov-20", email = "andrey_ukhnalev20@mail.ru"},
+]
+dependencies = []
+requires-python = "==3.12.*"
+readme = "README.md"
+license = {text = "GPL-3.0"}
+
+
+[tool.pdm]
+distribution = false
