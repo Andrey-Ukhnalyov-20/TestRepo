@@ -2,7 +2,7 @@ name: Test workflow
 on: workflow_dispatch
 jobs:
   env-setup:
-    runs-on: ubunti-latest
+    runs-on: ubuntu-latest
     steps:
       - name: Get repo
         uses: actions/checkout@v4
