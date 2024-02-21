@@ -1,16 +1,23 @@
 repos:
 - repo: local
   hooks:
+  - id: type-hints
+    name: check type hints with mypy
+    entry: bash -c 'pdm run mypy ./src/'
+    types: [python]
+    language: python
+    verbose: true
+    language_version: "3.12"
   - id: linter-hook
     name: lint and fix possible errors with ruff
-    entry: pdm run ruff check ./src/ --fix
+    entry: bash -c 'pdm run ruff check ./src/ --fix'
     types: [python]
     language: python
     verbose: true
     language_version: "3.12"
   - id: format-hook
     name: format files with ruff
-    entry: pdm run ruff format ./src/
+    entry: bash -c 'pdm run ruff format ./src/'
     types: [python]
     language: python
     verbose: true
