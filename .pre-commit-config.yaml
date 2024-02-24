@@ -1,0 +1,18 @@
+repos:
+- repo: local
+  hooks:
+  - id: type-hints
+    name: check type hints with mypy
+    entry: bash -c 'pdm run mypy ./src/'
+    language: system
+    verbose: true
+  - id: linter-hook
+    name: lint and fix possible errors with ruff
+    entry: bash -c 'pdm run ruff check ./src/ --fix'
+    language: system
+    verbose: true
+  - id: format-hook
+    name: format files with ruff
+    entry: bash -c 'pdm run ruff format ./src/'
+    language: system
+    verbose: true
