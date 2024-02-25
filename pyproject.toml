@@ -6,7 +6,7 @@ authors = [
     {name = "Andrey-Ukhnalyov-20", email = "andrey_ukhnalev20@mail.ru"},
 ]
 dependencies = [
-    "flet>=0.20.2",
+    "flet==0.19.0",
 ]
 requires-python = "==3.12.*"
 readme = "README.md"
